@@ -55,21 +55,20 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
 	box-sizing: border-box;
-	padding: 0;
-    margin: 0;
 	max-width: 100%;
 }
 
 html, body {
 	height: 100%;
 	font-size: 62.5%;
-	width: 75%;
+	
 	margin: 0 auto;
-	border: 1px solid red;
+	
 }
 
 @headerFont: 'Mansalva', cursive;
 @bodyFont: 'Slabo 27px', serif;
+@uFont: 2.5rem;
 
 .flexCenter(){
 	display: flex;
@@ -89,12 +88,12 @@ header {
 		
 	img {
 		border-radius: 50%;
-		height: auto;
 	}// closes img
 	.headshot {
 		width: 25%;
+		height: auto;
 		margin: 5%;
-		margin-left: 10%;
+		margin-left: 5%;
 	}// closes headshot
 	.content {
 		width:80%;
@@ -108,11 +107,11 @@ header {
 	.title{
 		
 		h1{
-			font-size: 5rem;
+			font-size: 10rem;
 			margin-bottom: 5%;
 		}//closes h1
 		h2{
-			font-size: 2.5rem;
+			font-size: 5rem;
 			margin-bottom: 10%;
 		}//closes h2
 	}//closes title	
@@ -121,13 +120,13 @@ header {
 		justify-content: space-between;
 		width: 35%;
 
-	}// closes ul
+		li a {
+			text-decoration: none;
+			font-size: 3rem;
+			color: white;
+		}
 
-	li a {
-		text-decoration: none;
-		font-size: 3rem;
-		color: white;
-	}
+	}// closes ul
 
 }//closes header
 
@@ -139,12 +138,101 @@ header {
 
 .body {
 	font-family: @bodyFont;
-	display: flex;
+	
 
 	h2 {
-		font-size: 2.5rem;
+		font-size: @uFont;
 	}// body h2
 	p {
-		font-size: 1.5rem;
+		font-size: 2rem;
+	}
+	.card1 {
+		padding: 5%;
+
+		h2 {
+			display: flex;
+			justify-content: center;
+			margin: 2%;
+		}
+		p {
+			padding: 2%;
+			text-align: center;
+		}
+	}
+	.card2 {
+		background-image: url("../../images/gradient.jpg");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		display: flex;
+		padding: 5%;
+
+		div {
+			margin: 2%;
+		}
+
+		h2 {
+			display: flex;
+			justify-content: center;
+			margin: 2%;
+		}
+		p {
+			padding: 2%;
+			text-align: center;
+		}
+	}
+	.card3 {
+		padding: 5%;
+
+		h2 {
+			display: flex;
+			justify-content: center;
+			margin: 2%;
+		}
+		p {
+			padding: 2%;
+			text-align: center;
+		}
 	}
 }//closes body
+
+// FOOTER STYLES 
+
+footer {
+	font-family: @bodyFont;
+	border: 1px solid red;
+	background-image: url("../../images/gradient2.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	display: flex;
+	h2 {
+		font-size: 2.5rem;
+	}
+	.contact {
+		padding: 5%;
+		line-height: 2;
+
+		h2 {
+			font-size: @uFont;
+		}
+		address {
+			font-size: 2rem;
+		}
+	}// closes contact
+	ul {	
+		display: flex;
+		text-align: center;
+		justify-content: space-around;
+		align-items: flex-end;
+		width: 100%;
+		margin-bottom: 1%;
+
+		li a {
+			text-decoration: none;
+			font-size: 3rem;
+			color: white;
+		}
+	}
+}// closes footer 

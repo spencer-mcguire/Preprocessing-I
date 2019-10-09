@@ -143,17 +143,13 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   max-width: 100%;
 }
 html,
 body {
   height: 100%;
   font-size: 62.5%;
-  width: 75%;
   margin: 0 auto;
-  border: 1px solid red;
 }
 header {
   font-family: 'Mansalva', cursive;
@@ -165,12 +161,12 @@ header {
 }
 header img {
   border-radius: 50%;
-  height: auto;
 }
 header .headshot {
   width: 25%;
+  height: auto;
   margin: 5%;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 header .content {
   width: 80%;
@@ -183,11 +179,11 @@ header .content {
   color: white;
 }
 header .title h1 {
-  font-size: 5rem;
+  font-size: 10rem;
   margin-bottom: 5%;
 }
 header .title h2 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   margin-bottom: 10%;
 }
 header ul {
@@ -195,7 +191,7 @@ header ul {
   justify-content: space-between;
   width: 35%;
 }
-header li a {
+header ul li a {
   text-decoration: none;
   font-size: 3rem;
   color: white;
@@ -205,11 +201,90 @@ header li a {
 }
 .body {
   font-family: 'Slabo 27px', serif;
-  display: flex;
 }
 .body h2 {
   font-size: 2.5rem;
 }
 .body p {
-  font-size: 1.5rem;
+  font-size: 2rem;
+}
+.body .card1 {
+  padding: 5%;
+}
+.body .card1 h2 {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+.body .card1 p {
+  padding: 2%;
+  text-align: center;
+}
+.body .card2 {
+  background-image: url("../../images/gradient.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  padding: 5%;
+}
+.body .card2 div {
+  margin: 2%;
+}
+.body .card2 h2 {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+.body .card2 p {
+  padding: 2%;
+  text-align: center;
+}
+.body .card3 {
+  padding: 5%;
+}
+.body .card3 h2 {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+.body .card3 p {
+  padding: 2%;
+  text-align: center;
+}
+footer {
+  font-family: 'Slabo 27px', serif;
+  border: 1px solid red;
+  background-image: url("../../images/gradient2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+}
+footer h2 {
+  font-size: 2.5rem;
+}
+footer .contact {
+  padding: 5%;
+  line-height: 2;
+}
+footer .contact h2 {
+  font-size: 2.5rem;
+}
+footer .contact address {
+  font-size: 2rem;
+}
+footer ul {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 1%;
+}
+footer ul li a {
+  text-decoration: none;
+  font-size: 3rem;
+  color: white;
 }
