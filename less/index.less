@@ -48,12 +48,103 @@ table {
 	border-spacing: 0;
 }
 
+// FONT 
+@import url('https://fonts.googleapis.com/css?family=Mansalva|Slabo+27px&display=swap');
+
+// MAIN STYLES
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+    margin: 0;
+	max-width: 100%;
 }
 
 html, body {
 	height: 100%;
+	font-size: 62.5%;
+	width: 75%;
+	margin: 0 auto;
+	border: 1px solid red;
 }
 
+@headerFont: 'Mansalva', cursive;
+@bodyFont: 'Slabo 27px', serif;
+
+.flexCenter(){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// HEADER STYLES
+
+header {
+	font-family: @headerFont;
+	background-image: url("../../images/hero.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+		
+	img {
+		border-radius: 50%;
+		height: auto;
+	}// closes img
+	.headshot {
+		width: 25%;
+		margin: 5%;
+		margin-left: 10%;
+	}// closes headshot
+	.content {
+		width:80%;
+		padding: 2.5%;
+		text-align: center;
+		.flexCenter();
+		flex-direction: column;	
+		color: white;
+	}// closes content
+	
+	.title{
+		
+		h1{
+			font-size: 5rem;
+			margin-bottom: 5%;
+		}//closes h1
+		h2{
+			font-size: 2.5rem;
+			margin-bottom: 10%;
+		}//closes h2
+	}//closes title	
+	ul {	
+		display: flex;
+		justify-content: space-between;
+		width: 35%;
+
+	}// closes ul
+
+	li a {
+		text-decoration: none;
+		font-size: 3rem;
+		color: white;
+	}
+
+}//closes header
+
+// BODY STYLES
+
+.body div {
+	border: 1px solid blue;
+}
+
+.body {
+	font-family: @bodyFont;
+	display: flex;
+
+	h2 {
+		font-size: 2.5rem;
+	}// body h2
+	p {
+		font-size: 1.5rem;
+	}
+}//closes body
