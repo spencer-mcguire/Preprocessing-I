@@ -208,11 +208,28 @@ header {
 	} // closes ul
 } //closes header
 
+// DOWNLOAD BUTTON
+
+.downloadButton {
+	display: flex;
+	justify-content: center;
+	margin-top: 2%;
+
+	button{
+	font-size: 2rem;
+	border-radius: 1rem;
+	padding: .5%;
+	background-image: linear-gradient(to bottom right, purple, dodgerblue);
+	color: white;
+	}	
+}
 // BODY STYLES
 
 .body {
 	font-family: @bodyFont;
-
+	@media (max-width: 500px){
+		display: none;
+	}
 	h2 {
 		font-size: @underFont;
 	} // body h2
@@ -220,7 +237,7 @@ header {
 		font-size: @bodyFont;
 	}
 	.card1 {
-		padding: 5%;
+		padding: 1%;
 
 		h2 {
 			display: flex;
@@ -279,6 +296,9 @@ header {
 // FOOTER STYLES
 
 footer {
+	@media (max-width: 500px){
+		display: none;
+	}
 	font-family: @bodyFont;
 	border: 1px solid red;
 	background-image: url("../../images/gradient2.jpg");
