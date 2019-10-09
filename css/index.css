@@ -119,7 +119,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -152,7 +152,7 @@ body {
   margin: 0 auto;
 }
 header {
-  font-family: 'Mansalva', cursive;
+  font-family: "Mansalva", cursive;
   background-image: url("../../images/hero.jpg");
   background-position: center;
   background-size: cover;
@@ -196,17 +196,14 @@ header ul li a {
   font-size: 3rem;
   color: white;
 }
-.body div {
-  border: 1px solid blue;
-}
 .body {
-  font-family: 'Slabo 27px', serif;
+  font-family: 1.5rem;
 }
 .body h2 {
   font-size: 2.5rem;
 }
 .body p {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .body .card1 {
   padding: 5%;
@@ -230,6 +227,7 @@ header ul li a {
 }
 .body .card2 div {
   margin: 2%;
+  width: 45%;
 }
 .body .card2 h2 {
   display: flex;
@@ -239,6 +237,12 @@ header ul li a {
 .body .card2 p {
   padding: 2%;
   text-align: center;
+}
+.body .card2 ul {
+  font-size: 1.5rem;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 2%;
 }
 .body .card3 {
   padding: 5%;
@@ -253,7 +257,7 @@ header ul li a {
   text-align: center;
 }
 footer {
-  font-family: 'Slabo 27px', serif;
+  font-family: 1.5rem;
   border: 1px solid red;
   background-image: url("../../images/gradient2.jpg");
   background-position: center;
@@ -261,6 +265,7 @@ footer {
   background-repeat: no-repeat;
   color: white;
   display: flex;
+  flex-direction: column;
 }
 footer h2 {
   font-size: 2.5rem;
@@ -268,6 +273,7 @@ footer h2 {
 footer .contact {
   padding: 5%;
   line-height: 2;
+  width: 100%;
 }
 footer .contact h2 {
   font-size: 2.5rem;
@@ -277,14 +283,16 @@ footer .contact address {
 }
 footer ul {
   display: flex;
-  text-align: center;
   justify-content: space-around;
-  align-items: flex-end;
   width: 100%;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
 }
 footer ul li a {
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: white;
+}
+footer h6 {
+  text-align: center;
+  font-size: 1.5rem;
 }

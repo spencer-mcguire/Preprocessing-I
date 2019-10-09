@@ -4,19 +4,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -25,22 +93,35 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
 body {
 	line-height: 1;
 }
-ol, ul {
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
 	content: none;
 }
 table {
@@ -48,8 +129,8 @@ table {
 	border-spacing: 0;
 }
 
-// FONT 
-@import url('https://fonts.googleapis.com/css?family=Mansalva|Slabo+27px&display=swap');
+// FONT
+@import url("https://fonts.googleapis.com/css?family=Mansalva|Slabo+27px&display=swap");
 
 // MAIN STYLES
 /* Set every element's box-sizing to border-box */
@@ -58,19 +139,19 @@ table {
 	max-width: 100%;
 }
 
-html, body {
+html,
+body {
 	height: 100%;
 	font-size: 62.5%;
-	
+
 	margin: 0 auto;
-	
 }
 
-@headerFont: 'Mansalva', cursive;
-@bodyFont: 'Slabo 27px', serif;
-@uFont: 2.5rem;
-
-.flexCenter(){
+@headerFont: "Mansalva", cursive;
+@bodyFont: "Slabo 27px", serif;
+@underFont: 2.5rem;
+@bodyFont: 1.5rem;
+.flexCenter() {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -85,37 +166,36 @@ header {
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
-		
+
 	img {
 		border-radius: 50%;
-	}// closes img
+	} // closes img
 	.headshot {
 		width: 25%;
 		height: auto;
 		margin: 5%;
 		margin-left: 5%;
-	}// closes headshot
+	} // closes headshot
 	.content {
-		width:80%;
+		width: 80%;
 		padding: 2.5%;
 		text-align: center;
 		.flexCenter();
-		flex-direction: column;	
+		flex-direction: column;
 		color: white;
-	}// closes content
-	
-	.title{
-		
-		h1{
+	} // closes content
+
+	.title {
+		h1 {
 			font-size: 10rem;
 			margin-bottom: 5%;
-		}//closes h1
-		h2{
+		} //closes h1
+		h2 {
 			font-size: 5rem;
 			margin-bottom: 10%;
-		}//closes h2
-	}//closes title	
-	ul {	
+		} //closes h2
+	} //closes title
+	ul {
 		display: flex;
 		justify-content: space-between;
 		width: 35%;
@@ -125,26 +205,19 @@ header {
 			font-size: 3rem;
 			color: white;
 		}
-
-	}// closes ul
-
-}//closes header
+	} // closes ul
+} //closes header
 
 // BODY STYLES
 
-.body div {
-	border: 1px solid blue;
-}
-
 .body {
 	font-family: @bodyFont;
-	
 
 	h2 {
-		font-size: @uFont;
-	}// body h2
+		font-size: @underFont;
+	} // body h2
 	p {
-		font-size: 2rem;
+		font-size: @bodyFont;
 	}
 	.card1 {
 		padding: 5%;
@@ -169,6 +242,7 @@ header {
 
 		div {
 			margin: 2%;
+			width: 45%;
 		}
 
 		h2 {
@@ -179,6 +253,12 @@ header {
 		p {
 			padding: 2%;
 			text-align: center;
+		}
+		ul {
+			font-size: @bodyFont;
+			display: flex;
+			flex-flow: column wrap;
+			padding: 2%;
 		}
 	}
 	.card3 {
@@ -194,9 +274,9 @@ header {
 			text-align: center;
 		}
 	}
-}//closes body
+} //closes body
 
-// FOOTER STYLES 
+// FOOTER STYLES
 
 footer {
 	font-family: @bodyFont;
@@ -207,32 +287,35 @@ footer {
 	background-repeat: no-repeat;
 	color: white;
 	display: flex;
+	flex-direction: column;
 	h2 {
 		font-size: 2.5rem;
 	}
 	.contact {
 		padding: 5%;
 		line-height: 2;
-
+		width: 100%;
 		h2 {
-			font-size: @uFont;
+			font-size: @underFont;
 		}
 		address {
 			font-size: 2rem;
 		}
-	}// closes contact
-	ul {	
+	} // closes contact
+	ul {
 		display: flex;
-		text-align: center;
 		justify-content: space-around;
-		align-items: flex-end;
 		width: 100%;
-		margin-bottom: 1%;
+		margin-bottom: 2%;
 
 		li a {
 			text-decoration: none;
-			font-size: 3rem;
+			font-size: 3.5rem;
 			color: white;
 		}
+	} // closes UL
+	h6 {
+		text-align: center;
+		font-size: 1.5rem;
 	}
-}// closes footer 
+} // closes bottomContent
