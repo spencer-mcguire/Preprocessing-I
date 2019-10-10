@@ -202,7 +202,7 @@ header ul li a {
   margin-top: 2%;
 }
 .downloadButton button {
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-radius: 1rem;
   padding: 0.5%;
   background-image: linear-gradient(to bottom right, purple, dodgerblue);
@@ -262,7 +262,10 @@ header ul li a {
   padding: 2%;
 }
 .body .card3 {
+  font-size: 1.5rem;
   padding: 5%;
+  display: flex;
+  flex-direction: column;
 }
 .body .card3 h2 {
   display: flex;
@@ -271,6 +274,31 @@ header ul li a {
 }
 .body .card3 p {
   padding: 2%;
+  text-align: center;
+}
+.body .card3 table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body .card3 table td,
+.body .card3 table th {
+  text-align: center;
+  padding: 1%;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 600px;
+}
+.body .card3 table th {
+  background: #F3F3F3;
+  font-weight: bold;
+}
+.body .card3 table td {
+  background: #FAFAFA;
   text-align: center;
 }
 footer {
