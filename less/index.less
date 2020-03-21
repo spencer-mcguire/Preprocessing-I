@@ -4,19 +4,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -25,22 +93,35 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
 body {
 	line-height: 1;
 }
-ol, ul {
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
 	content: none;
 }
 table {
@@ -48,12 +129,238 @@ table {
 	border-spacing: 0;
 }
 
+// FONT
+@import url("https://fonts.googleapis.com/css?family=Mansalva|Slabo+27px&display=swap");
+
+// MAIN STYLES
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
+	font-size: 62.5%;
+
+	margin: 0 auto;
 }
 
+@headerFont: "Mansalva", cursive;
+@bodyFont: "Slabo 27px", serif;
+@underFont: 2.5rem;
+@bodyFont: 1.5rem;
+.flexCenter() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// HEADER STYLES
+
+header {
+	font-family: @headerFont;
+	background-image: url("../../images/hero.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+
+	img {
+		border-radius: 50%;
+	} // closes img
+	.headshot {
+		width: 25%;
+		height: auto;
+		margin: 5%;
+		margin-left: 5%;
+	} // closes headshot
+	.content {
+		width: 80%;
+		padding: 2.5%;
+		text-align: center;
+		.flexCenter();
+		flex-direction: column;
+		color: white;
+	} // closes content
+
+	.title {
+		h1 {
+			font-size: 10rem;
+			margin-bottom: 5%;
+		} //closes h1
+		h2 {
+			font-size: 5rem;
+			margin-bottom: 10%;
+		} //closes h2
+	} //closes title
+	ul {
+		display: flex;
+		justify-content: space-between;
+		width: 35%;
+
+		li a {
+			text-decoration: none;
+			font-size: 3rem;
+			color: white;
+		}
+	} // closes ul
+} //closes header
+
+// DOWNLOAD BUTTON
+
+.downloadButton {
+	display: flex;
+	justify-content: center;
+	margin-top: 2%;
+
+	button {
+		font-size: 1.5rem;
+		border-radius: 1rem;
+		padding: 0.5%;
+		background-image: linear-gradient(to bottom right, purple, dodgerblue);
+		color: white;
+	}
+}
+// BODY STYLES
+
+.body {
+	font-family: @bodyFont;
+	@media (max-width: 500px) {
+		display: none;
+	}
+	h2 {
+		font-size: @underFont;
+	} // body h2
+	p {
+		font-size: @bodyFont;
+	}
+	.card1 {
+		padding: 1%;
+
+		h2 {
+			display: flex;
+			justify-content: center;
+			margin: 2%;
+		}
+		p {
+			padding: 2%;
+			text-align: center;
+		}
+	}
+	.card2 {
+		background-image: url("../../images/gradient.jpg");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		display: flex;
+		padding: 5%;
+
+		div {
+			margin: 2%;
+			width: 45%;
+		}
+
+		h2 {
+			display: flex;
+			justify-content: center;
+			margin: 2%;
+		}
+		p {
+			padding: 2%;
+			text-align: center;
+		}
+		ul {
+			font-size: @bodyFont;
+			display: flex;
+			flex-flow: column wrap;
+			padding: 2%;
+		}
+	}
+	.card3 {
+		font-size: @bodyFont;
+		padding: 5%;
+		display: flex;
+		flex-direction: column;
+
+		h2 {
+			display: flex;
+			justify-content: center;
+			margin: 2%;
+		}
+		p {
+			padding: 2%;
+			text-align: center;
+		}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			border-spacing: 0;
+			color: #333;
+			.flexCenter();
+			td,th {
+				text-align: center;
+				padding: 1%;
+				border: 1px solid #ccc;
+				height: 30px;
+				width: 600px;
+			}
+			th {  
+				background: #F3F3F3;
+				font-weight: bold;
+			}
+			td {  
+				background: #FAFAFA;
+				text-align: center; 
+			}
+		}
+	}
+} //closes body
+
+// FOOTER STYLES
+
+footer {
+	@media (max-width: 500px) {
+		display: none;
+	}
+	font-family: @bodyFont;
+	border: 1px solid red;
+	background-image: url("../../images/gradient2.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	h2 {
+		font-size: 2.5rem;
+	}
+	.contact {
+		padding: 5%;
+		line-height: 2;
+		width: 100%;
+		h2 {
+			font-size: @underFont;
+		}
+		address {
+			font-size: 2rem;
+		}
+	} // closes contact
+	ul {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		margin-bottom: 2%;
+
+		li a {
+			text-decoration: none;
+			font-size: 3.5rem;
+			color: white;
+		}
+	} // closes UL
+	h6 {
+		text-align: center;
+		font-size: 1.5rem;
+	}
+} // closes bottomContent
